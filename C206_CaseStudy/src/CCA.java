@@ -1,90 +1,76 @@
+/**
+ * I declare that this code was written by me. 
+ * I will not copy or allow others to copy my code. 
+ * I understand that copying code is considered as plagiarism.
+ * 
+ * Student Name: Nicole
+ * Student ID: 20025835
+ * Class: E37A
+ * Date/Time created: Monday 02-08-2021 21:02
+
+ */
 
 public class CCA {
-	private int ccaID;
-	private String ccaName;
+	private String title;
 	private String description;
-	private String classsize;
-	private String dayofweek;
+	private String size;
+	private String day;
 	private String time;
 	private String venue;
-	private String nameofInstructor;
+	private String InstructorName;
 	
-	public CCA(int ccaID, String ccaName, String description, String classsize, String dayofweek, String time,
-			String venue, String nameofInstructor) {
+	public CCA(String title, String description, String size, String day, String time, String venue,
+			String instructorName) {
 		super();
-		this.ccaID = ccaID;
-		this.ccaName = ccaName;
+		this.title = title;
 		this.description = description;
-		this.classsize = classsize;
-		this.dayofweek = dayofweek;
+		this.size = size;
+		this.day = day;
 		this.time = time;
 		this.venue = venue;
-		this.nameofInstructor = nameofInstructor;
+		InstructorName = instructorName;
 	}
-
-	public int getCcaID() {
-		return ccaID;
+	
+	public String getTitle() {
+		return title;
 	}
-
-	public void setCcaID(int ccaID) {
-		this.ccaID = ccaID;
+	public void setTitle(String title) {
+		this.title = title;
 	}
-
-	public String getCcaName() {
-		return ccaName;
-	}
-
-	public void setCcaName(String ccaName) {
-		this.ccaName = ccaName;
-	}
-
 	public String getDescription() {
 		return description;
 	}
-
 	public void setDescription(String description) {
 		this.description = description;
 	}
-
-	public String getClasssize() {
-		return classsize;
+	public String getSize() {
+		return size;
 	}
-
-	public void setClasssize(String classsize) {
-		this.classsize = classsize;
+	public void setSize(String size) {
+		this.size = size;
 	}
-
-	public String getDayofweek() {
-		return dayofweek;
+	public String getDay() {
+		return day;
 	}
-
-	public void setDayofweek(String dayofweek) {
-		this.dayofweek = dayofweek;
+	public void setDay(String day) {
+		this.day = day;
 	}
-
 	public String getTime() {
 		return time;
 	}
-
 	public void setTime(String time) {
 		this.time = time;
 	}
-
 	public String getVenue() {
 		return venue;
 	}
-
 	public void setVenue(String venue) {
 		this.venue = venue;
 	}
-
-	public String getNameofInstructor() {
-		return nameofInstructor;
+	public String getInstructorName() {
+		return InstructorName;
 	}
-
-	public void setNameofInstructor(String nameofInstructor) {
-		this.nameofInstructor = nameofInstructor;
+	public void setInstructorName(String instructorName) {
+		InstructorName = instructorName;
 	}
-	
-	
 }
