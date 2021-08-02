@@ -9,7 +9,7 @@ public class Student {
 	private String parentName;
 	private String parentEmail;
 	private String address;
-	private String contactNo;
+	private String parentNumber;
 	private String cca;
 	
 	
@@ -19,7 +19,7 @@ public class Student {
 		
 	}
 	public Student(int studentID, String name, String grade, String classname, String classteacher,
-			String parentName, String parentEmail, String address, String contactNo, String cca) {
+			String parentName, String parentEmail, String address, String parentNumber, String cca) {
 		super();
 		this.StudentID = studentID;
 		this.Name = name;
@@ -29,7 +29,7 @@ public class Student {
 		this.parentName = parentName;
 		this.parentEmail = parentEmail;
 		this.address = address;
-		this.contactNo = contactNo;
+		this.parentNumber = parentNumber;
 		this.cca = cca;
 	}
 	
@@ -46,7 +46,7 @@ public class Student {
 	}
 	
 	public Student(int studentID, String name, String grade, String classname, String classteacher,
-			String parentName, String parentEmail, String address, String contactNo) {
+			String parentName, String parentEmail, String address, String parentNumber) {
 		super();
 		this.StudentID = studentID;
 		this.Name = name;
@@ -56,7 +56,7 @@ public class Student {
 		this.parentName = parentName;
 		this.parentEmail = parentEmail;
 		this.address = address;
-		this.contactNo = contactNo;
+		this.parentNumber = parentNumber;
 		
 	}
 
@@ -137,14 +137,14 @@ public class Student {
 		this.address = address;
 	}
 	
-	public String getContactNo() {
+	public String getParentNumber() {
 		
-		return contactNo;
+		return parentNumber;
 	}
 	
-	public void setContactNo(String contactNo) {
+	public void setParentNumber(String parentNumber) {
 		
-		this.contactNo = contactNo;
+		this.parentNumber = parentNumber;
 	}
 	
 }
