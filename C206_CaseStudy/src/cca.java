@@ -19,7 +19,6 @@ public class cca {
 	private String venue;
 	private String InstructorName;
 	
-	
 	public cca(String title, String description, Integer size, String day, String time, String venue,
 			String instructorName) {
 		super();
