@@ -11,7 +11,7 @@ public class C206_CaseStudy {
 		Student student1 = new Student(01,"Ezekiel", "P6", "P6-01", "Mr Lim", "Mr Joespeh ", "jospeh@gamil.com","No 4 , Bedok Road , Singapore", "+65 85950014");
 		studentList.add(student1);
 
-		
+		//Hello
 		Admin admin = new Admin("Systemadmin ", "admin", "admin", 1, "admin");
 		
 		
