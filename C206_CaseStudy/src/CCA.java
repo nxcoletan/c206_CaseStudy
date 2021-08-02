@@ -1,16 +1,5 @@
-/**
- * I declare that this code was written by me. 
- * I will not copy or allow others to copy my code. 
- * I understand that copying code is considered as plagiarism.
- * 
- * Student Name: Nicole
- * Student ID: 20025835
- * Class: E37A
- * Date/Time created: Monday 02-08-2021 21:02
-
- */
-//changes
 public class CCA {
+	private int id;
 	private String title;
 	private String description;
 	private String size;
@@ -19,9 +8,10 @@ public class CCA {
 	private String venue;
 	private String InstructorName;
 	
-	public CCA(String title, String description, String size, String day, String time, String venue,
+	public CCA(int id, String title, String description, String size, String day, String time, String venue,
 			String instructorName) {
 		super();
+		this.id = id;
 		this.title = title;
 		this.description = description;
 		this.size = size;
@@ -29,6 +19,10 @@ public class CCA {
 		this.time = time;
 		this.venue = venue;
 		InstructorName = instructorName;
+	}
+	
+	public int getID() {
+		return id;
 	}
 	
 	public String getTitle() {
