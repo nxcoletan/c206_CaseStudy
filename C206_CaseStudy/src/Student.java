@@ -1,7 +1,7 @@
 
 public class Student {
 	
-	private String StudentID;
+	private int StudentID;
 	private String Name;
 	private String Grade;
 	private String Classname;
@@ -10,30 +10,58 @@ public class Student {
 	private String parentEmail;
 	private String address;
 	private String contactNo;
-	private boolean isAvailable;
+	private String cca;
 	
-	public String getStudentID() {
+	
+	public int getStudentID() {
 		
 		return StudentID;
 		
 	}
-	public Student(String studentID, String name, String grade, String classname, String classteacher,
-			String parentName, String parentEmail, String address, String contactNo, boolean isAvailable) {
+	public Student(int studentID, String name, String grade, String classname, String classteacher,
+			String parentName, String parentEmail, String address, String contactNo, String cca) {
 		super();
-		StudentID = studentID;
-		Name = name;
-		Grade = grade;
-		Classname = classname;
-		Classteacher = classteacher;
+		this.StudentID = studentID;
+		this.Name = name;
+		this.Grade = grade;
+		this.Classname = classname;
+		this.Classteacher = classteacher;
 		this.parentName = parentName;
 		this.parentEmail = parentEmail;
 		this.address = address;
 		this.contactNo = contactNo;
-		this.isAvailable = isAvailable;
+		this.cca = cca;
+	}
+	
+	public String getCca() {
+		
+		return cca;
+		
+	}
+	
+	public void setCca(String cca) {
+		
+		this.cca = cca;
+		
+	}
+	
+	public Student(int studentID, String name, String grade, String classname, String classteacher,
+			String parentName, String parentEmail, String address, String contactNo) {
+		super();
+		this.StudentID = studentID;
+		this.Name = name;
+		this.Grade = grade;
+		this.Classname = classname;
+		this.Classteacher = classteacher;
+		this.parentName = parentName;
+		this.parentEmail = parentEmail;
+		this.address = address;
+		this.contactNo = contactNo;
+		
 	}
 
 	
-	public void setStudentID(String studentID) {
+	public void setStudentID(int studentID) {
 		
 		StudentID = studentID;
 		
@@ -119,16 +147,4 @@ public class Student {
 		this.contactNo = contactNo;
 	}
 	
-	public boolean isAvailable() {
-		
-		return isAvailable;
-	}
-	
-	public void setAvailable(boolean isAvailable) {
-		
-		this.isAvailable = isAvailable;
-	}
-	
-	
-
 }
