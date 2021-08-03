@@ -3,6 +3,7 @@ public class Student {
 	
 	private int StudentID;
 	private String Name;
+	private String registrationID;
 	private String Grade;
 	private String Classname;
 	private String Classteacher;
@@ -12,17 +13,16 @@ public class Student {
 	private String parentNumber;
 	private String cca;
 	
-	
 	public int getStudentID() {
 		
 		return StudentID;
 		
 	}
-	public Student(int studentID, String name, String grade, String classname, String classteacher,
+	public Student(int studentID, String name, String registrationID, String grade, String classname, String classteacher,
 			String parentName, String parentEmail, String address, String parentNumber, String cca) {
-		super();
 		this.StudentID = studentID;
 		this.Name = name;
+		this.registrationID = registrationID;
 		this.Grade = grade;
 		this.Classname = classname;
 		this.Classteacher = classteacher;
@@ -49,14 +49,16 @@ public class Student {
 			String parentName, String parentEmail, String address, String parentNumber) {
 		super();
 		this.StudentID = studentID;
-		this.Name = name;
+		this.Name = name;	
 		this.Grade = grade;
+		this.registrationID = "";
 		this.Classname = classname;
 		this.Classteacher = classteacher;
 		this.parentName = parentName;
 		this.parentEmail = parentEmail;
 		this.address = address;
 		this.parentNumber = parentNumber;
+		this.cca = "Pending";
 		
 	}
 
@@ -75,6 +77,13 @@ public class Student {
 	public void setName(String name) {
 		
 		Name = name;
+	}
+	
+	public String getRegistrationID() {
+		return registrationID;
+	}
+	public void setRegistrationID(String registrationID) {
+		this.registrationID = registrationID;
 	}
 	
 	public String getGrade() {

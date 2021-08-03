@@ -18,7 +18,7 @@ public class CCA {
 		this.day = day;
 		this.time = time;
 		this.venue = venue;
-		InstructorName = instructorName;
+		this.InstructorName = instructorName;
 	}
 	
 	public int getID() {
