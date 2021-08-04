@@ -294,10 +294,12 @@ public class C206_CaseStudy {
 						String ccaChoice = Helper.readString("Enter CCA name > ");
 						for (int i = 0; i < ccaList.size(); i++) {
 							if (ccaList.get(i).getTitle().equalsIgnoreCase(ccaChoice) && studentList.get(i).getStudentID() == uName) {
-								studentList.get(i).setCca(ccaList.get(i).getTitle());
+								studentList.get(i).setCca(ccaChoice.toUpperCase());
 								System.out.println("Dear " + studentList.get(i).getName() + ", your CCA " + ccaList.get(i).getTitle() + "has been successfully added!");
 								String studentDetails = C206_CaseStudy.getStudentListById(studentList, uName);
 								System.out.println(studentDetails);
+							} else {
+								System.out.println("Not added successfully!");
 							}
 						}						
 							 					
@@ -345,7 +347,7 @@ public class C206_CaseStudy {
 				Student newSchedule = new Student(StudentID, Name, Grade, Classname, Classteacher, parentName,  parentEmail,  address,  contactNo);
 				boolean result = C206_CaseStudy.addStudent(studentList, newSchedule);
 				if (result == true) {
-					student = C206_CaseStudy.randomID(student);
+					student = C206_CaseStudy.randomID(newSchedule);
 					System.out.println("Registration successful!");
 					System.out.println("Your CCA registration ID: " + student.getRegistrationID());
 				} else {
