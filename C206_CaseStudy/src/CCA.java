@@ -67,4 +67,12 @@ public class CCA {
 	public void setInstructorName(String instructorName) {
 		InstructorName = instructorName;
 	}
+
+	@Override
+	public String toString() {
+		return "CCA [id=" + id + ", title=" + title + ", description=" + description + ", size=" + size + ", day=" + day
+				+ ", time=" + time + ", venue=" + venue + ", InstructorName=" + InstructorName + "]";
+	}
 }
+
+
