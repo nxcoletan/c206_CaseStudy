@@ -48,7 +48,8 @@ public class C206_CaseStudy {
 
 						//EDIT STUDENT ACCOUNT
 						} else if (choice == 2) {
-							
+							String allstudentList = C206_CaseStudy.studentListToString(studentList);
+							System.out.println(allstudentList);
 							int EditStudentID = Helper.readInt("Enter Student ID > ");
 							String StudentListDetails = C206_CaseStudy.getStudentListById(studentList, EditStudentID);
 							if (!StudentListDetails.isEmpty()) {
@@ -75,7 +76,10 @@ public class C206_CaseStudy {
 							}
 							
 						//DELETE STUDENT ACCOUNT
-						} else if (choice == 3) {				
+						} else if (choice == 3) {
+							String allstudentList = C206_CaseStudy.studentListToString(studentList);
+							System.out.println(allstudentList);
+							
 							int deleteStudentID = Helper.readInt("Enter Student ID > ");
 
 							String Studentdetails = C206_CaseStudy.getStudentListById(studentList, deleteStudentID);
@@ -98,7 +102,10 @@ public class C206_CaseStudy {
 							}
 
 						//ADD A CCA
-						} else if (choice == 4) {		
+						} else if (choice == 4) {	
+							String allccaList = C206_CaseStudy.CCAListToString(ccaList);
+							System.out.println(allccaList);
+							
 							int id = Helper.readInt("Enter ID number > ");
 							String ccaName = Helper.readString("Enter CCA Name > ");
 							String description = Helper.readString("Enter CCA Description > ");
@@ -118,6 +125,9 @@ public class C206_CaseStudy {
 
 						//DELETE A CCA
 						} else if (choice == 5) {
+							
+							String allccaList = C206_CaseStudy.CCAListToString(ccaList);
+							System.out.println(allccaList);
 							
 							int deleteCCAID = Helper.readInt("Enter CCA ID > ");
 
@@ -143,6 +153,9 @@ public class C206_CaseStudy {
 						//EDIT A CCA
 						} else if (choice == 6) {
 							
+							String allccaList = C206_CaseStudy.CCAListToString(ccaList);
+							System.out.println(allccaList);
+							
 							int EditCCAID = Helper.readInt("Enter CCA ID > ");
 							String CCAdetails = C206_CaseStudy.getCCAListById(ccaList, EditCCAID);
 							if (!CCAdetails.isEmpty()) {
@@ -167,8 +180,13 @@ public class C206_CaseStudy {
 								System.out.println("That CCA ID does not exist!");
 							}
 
-					//QUIT
-					} else if (choice == 7) {
+					// View all CCA
+					}else if (choice == 7){
+						String allccaList = C206_CaseStudy.CCAListToString(ccaList);
+						System.out.println(allccaList);
+					
+						//QUIT	
+					} else if (choice == 8) {
 						isAdmin = false;
 						System.out.println("Goodbye!");
 					
@@ -195,6 +213,8 @@ public class C206_CaseStudy {
 					//ADD CCA
 					if (choice == 1) {
 						int id = Helper.readInt("Enter ID number > ");
+						String allccaList = C206_CaseStudy.CCAListToString(ccaList);
+						System.out.println(allccaList);
 						String ccaName = Helper.readString("Enter CCA Name > ");
 						String description = Helper.readString("Enter CCA Description > ");
 						String classsize = Helper.readString("Enter Class Size > ");
@@ -215,6 +235,8 @@ public class C206_CaseStudy {
 					
 					//DELETE CCA
 					} else if (choice == 2) {
+						String allccaList = C206_CaseStudy.CCAListToString(ccaList);
+						System.out.println(allccaList);
 						int deleteCCAId = Helper.readInt("Enter CCA ID > ");
 						
 						String CCAdetails = C206_CaseStudy.getCCAListById(ccaList, deleteCCAId);
@@ -237,7 +259,9 @@ public class C206_CaseStudy {
 						}
 						
 					//EDIT CCA
-					} else if (choice == 3) {						
+					} else if (choice == 3) {		
+						String allccaList = C206_CaseStudy.CCAListToString(ccaList);
+						System.out.println(allccaList);
 						String CCAdetails = C206_CaseStudy.CCAListToString(ccaList);
 						System.out.println(CCAdetails);
 						int EditCCAId = Helper.readInt("Enter CCA ID > ");
@@ -262,8 +286,13 @@ public class C206_CaseStudy {
 							System.out.println("That CCA ID does not exist!");
 						}
 					
+					
+					}else if (choice == 4) {
+					String allccaList = C206_CaseStudy.CCAListToString(ccaList);
+					System.out.println(allccaList);
+	
 					//QUIT
-					} else if (choice == 4) {
+					}else if (choice == 5) {
 						isCoordin = false;
 						System.out.println("Goodbye!");
 					
@@ -579,7 +608,8 @@ public class C206_CaseStudy {
 		System.out.println("4. Add CCA");
 		System.out.println("5. Delete CCA");
 		System.out.println("6. Update CCA");
-		System.out.println("7. Quit");
+		System.out.println("7. View All CCA");
+		System.out.println("8. Quit");
 
 	}
 	
@@ -592,7 +622,8 @@ public class C206_CaseStudy {
 		System.out.println("1. Add CCA");
 		System.out.println("2. Delete CCA");
 		System.out.println("3. Update CCA");
-		System.out.println("4. Quit");
+		System.out.println("4. View All CCA");
+		System.out.println("5. Quit");
 
 	}
 	
