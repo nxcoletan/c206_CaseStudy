@@ -321,16 +321,21 @@ public class C206_CaseStudy {
 						String CCAdetails = C206_CaseStudy.CCAListToString(ccaList);
 						System.out.println(CCAdetails);
 						String ccaChoice = Helper.readString("Enter CCA name > ");
+						boolean isValid = false;
 						for (int i = 0; i < ccaList.size(); i++) {
 							if (ccaList.get(i).getTitle().equalsIgnoreCase(ccaChoice) && studentList.get(i).getStudentID() == uName) {
 								studentList.get(i).setCca(ccaChoice.toUpperCase());
 								System.out.println("Dear " + studentList.get(i).getName() + ", your CCA " + ccaList.get(i).getTitle() + "has been successfully added!");
 								String studentDetails = C206_CaseStudy.getStudentListById(studentList, uName);
 								System.out.println(studentDetails);
-							} else {
+								isValid = true;
+								break;
+
+							} 
+						}
+						if(isValid == true) {
 								System.out.println("Not added successfully!");
-							}
-						}						
+							}						
 							 					
 					//DROP CCA
 					} else if (choice == 2) {
