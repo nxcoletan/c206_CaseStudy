@@ -1,18 +1,20 @@
-public class CCA {
+    public class CCA {
 	private int id;
 	private String title;
-	private String description;
+	private String category;
+	private String description;	
 	private String size;
 	private String day;
 	private String time;
 	private String venue;
 	private String InstructorName;
 	
-	public CCA(int id, String title, String description, String size, String day, String time, String venue,
+	public CCA(int id, String title, String category, String description, String size, String day, String time, String venue,
 			String instructorName) {
 		super();
 		this.id = id;
 		this.title = title;
+		this.category = category;
 		this.description = description;
 		this.size = size;
 		this.day = day;
@@ -31,6 +33,16 @@ public class CCA {
 	public void setTitle(String title) {
 		this.title = title;
 	}
+	
+	
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+
 	public String getDescription() {
 		return description;
 	}
@@ -67,12 +79,6 @@ public class CCA {
 	public void setInstructorName(String instructorName) {
 		InstructorName = instructorName;
 	}
-
-	@Override
-	public String toString() {
-		return "CCA [id=" + id + ", title=" + title + ", description=" + description + ", size=" + size + ", day=" + day
-				+ ", time=" + time + ", venue=" + venue + ", InstructorName=" + InstructorName + "]";
-	}
 }
 
-
+    

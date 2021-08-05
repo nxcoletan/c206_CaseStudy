@@ -1,4 +1,4 @@
-
+    
 public class Student {
 	
 	private int StudentID;
@@ -51,7 +51,7 @@ public class Student {
 		this.StudentID = studentID;
 		this.Name = name;	
 		this.Grade = grade;
-		this.registrationID = "";
+		this.registrationID = "wq321";
 		this.Classname = classname;
 		this.Classteacher = classteacher;
 		this.parentName = parentName;
@@ -157,3 +157,5 @@ public class Student {
 	}
 	
 }
+
+    

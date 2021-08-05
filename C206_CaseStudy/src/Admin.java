@@ -1,4 +1,4 @@
-
+    
 public class Admin {
 	private String name;
 	private String username;
@@ -39,3 +39,5 @@ public class Admin {
 	}
 
 }
+
+    

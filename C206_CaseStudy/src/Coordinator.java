@@ -1,15 +1,4 @@
-/*
- * I declare that this code was written by me. 
- * I will not copy or allow others to copy my code. 
- * I understand that copying code is considered as plagiarism.
- * 
- * Student Name: Ezekiel Tan
- * Student ID: 20011155
- * Class: E37E
- * Date/Time created: Tuesday 03-08-2021 21:50
- */
-
-public class Coordinator {
+ public class Coordinator {
 	private String name;
 	private String username;
 	private String password;
@@ -51,3 +40,5 @@ public class Coordinator {
 
 
 }
+
+    
