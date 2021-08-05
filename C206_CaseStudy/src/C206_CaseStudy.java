@@ -333,7 +333,7 @@ public class C206_CaseStudy {
 
 							} 
 						}
-						if(isValid == true) {
+						if(isValid == false) {
 								System.out.println("Not added successfully!");
 							}						
 							 					
