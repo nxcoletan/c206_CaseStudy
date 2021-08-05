@@ -438,7 +438,7 @@ public class C206_CaseStudy {
 	
 	
 	// CCA METHODS
-	private static boolean addCCA(ArrayList<CCA> ccaList, CCA newCCA) {
+	static boolean addCCA(ArrayList<CCA> ccaList, CCA newCCA) {
 		boolean r = false;
 		if (newCCA.getTitle().isEmpty() == true || newCCA.getDescription().isEmpty() == true || newCCA.getSize().isEmpty() == true || 
 				newCCA.getDay().isEmpty() == true || newCCA.getTime().isEmpty() == true || newCCA.getVenue().isEmpty() == true || 
@@ -487,7 +487,7 @@ public class C206_CaseStudy {
 	}
 
 
-	private static String getCCAListById(ArrayList<CCA> ccaList, int deleteCCAID) {
+	static String getCCAListById(ArrayList<CCA> ccaList, int deleteCCAID) {
 		String output = "";
 
 		for (int i = 0; i < ccaList.size(); i++) {
@@ -516,7 +516,7 @@ public class C206_CaseStudy {
 	
 
 	// STUDENT METHODS
-	private static boolean addStudent(ArrayList<Student> studentList, Student newSchedule) {
+	static boolean addStudent(ArrayList<Student> studentList, Student newSchedule) {
 		boolean r = false;
 		if (newSchedule.getName().isEmpty() == true || newSchedule.getGrade().isEmpty() == true || 
 				newSchedule.getClassname().isEmpty() == true || newSchedule.getClassteacher().isEmpty() == true || 
@@ -566,7 +566,7 @@ public class C206_CaseStudy {
 	}
 
 
-	private static String getStudentListById(ArrayList<Student> studentList, int studentID) {
+	static String getStudentListById(ArrayList<Student> studentList, int studentID) {
 		String output = "";
 
 		for (int i = 0; i < studentList.size(); i++) {
