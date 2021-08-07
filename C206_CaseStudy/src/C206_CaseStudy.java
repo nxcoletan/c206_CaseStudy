@@ -65,7 +65,8 @@ public class C206_CaseStudy {
 								String parentNameUpdate = Helper.readString("Enter Parent Name > ");
 								String parentEmailUpdate = Helper.readString("Enter Parent Email > ");
 								String contactNoUpdate = Helper.readString("Enter Contact Number > ");
-								String addressUpdate = Helper.readString("Enter Address > ");								
+								String addressUpdate = Helper.readString("Enter Address > ");
+								
 								
 								boolean isEdited = C206_CaseStudy.editStudentStatus(studentList, EditStudentID, NameUpdate, GradeUpdate, ClassnameUpdate, ClassteacherUpdate, parentNameUpdate, parentEmailUpdate, addressUpdate, contactNoUpdate);
 								if (isEdited == true) {
@@ -173,6 +174,7 @@ public class C206_CaseStudy {
 								String timeUpdate = Helper.readString("Enter CCA time > ");
 								String venueUpdate = Helper.readString("Enter CCA Venue > ");
 								String nameofInstructorUpdate = Helper.readString("Enter CCA Instructor Name > ");
+								
 						
 								boolean isEdited = C206_CaseStudy.editCCAStatus(ccaList, EditCCAID, ccaNameUpdate, ccaCatUpdate, descriptionUpdate, classsizeUpdate, dayofweekUpdate, timeUpdate, venueUpdate, nameofInstructorUpdate);
 								if (isEdited) {
@@ -452,7 +454,7 @@ public class C206_CaseStudy {
 		return r;
 	}
 	
-	private static boolean editCCAStatus(ArrayList<CCA> ccaList, int editCCAID, String titleUpdate, String catUpdate,
+	static boolean editCCAStatus(ArrayList<CCA> ccaList, int editCCAID, String titleUpdate, String catUpdate,
 			String descUpdate, String sizeUpdate, String dayUpdate, String timeNameUpdate,
 			String venueUpdate, String instructorUpdate) {
 		boolean rightStatus = false;
@@ -473,7 +475,7 @@ public class C206_CaseStudy {
 	}
 
 
-	private static boolean removeCCA(ArrayList<CCA> ccaList, int deleteCCAID) {
+	static boolean removeCCA(ArrayList<CCA> ccaList, int deleteCCAID) {
 		boolean a = false;
 		for (int i = 0; i < ccaList.size(); i++) {
 			CCA s = ccaList.get(i);
@@ -503,16 +505,25 @@ public class C206_CaseStudy {
 		return output;
 	}
 	
-	private static String CCAListToString(ArrayList<CCA> ccaList) {
+	static String CCAListToString(ArrayList<CCA> ccaList) {
 		String output = "";
 		output += String.format("%-3s %-10s %-17s %-50s %-14s %-15s %-10s %-15s %-10s\n", "ID", "NAME", "CATEGORY", "DESCRIPTION", "CLASS SIZE", "DAY OF WEEK ", "TIME", "VENEUE", "INSTRUCTOR");
 		for (int i = 0; i < ccaList.size(); i++) {
 			CCA cca = ccaList.get(i);				
-			output += String.format("%-3s %-10s %-17s %-50s %-14s %-15s %-10s %-15s %-10s\n", cca.getID(), cca.getTitle(), cca.getCategory(),cca.getDescription(), cca.getSize(), cca.getDay(),cca.getTime(), cca.getVenue(), cca.getInstructorName());
+			output += String.format("%-3d %-10s %-17s %-50s %-14s %-15s %-10s %-15s %-10s\n", cca.getID(), cca.getTitle(), cca.getCategory(),cca.getDescription(), cca.getSize(), cca.getDay(),cca.getTime(), cca.getVenue(), cca.getInstructorName());
 		}
 		return output;
 	}
 
+	static String studentListToString(ArrayList<Student> studentList) {
+		String output = "";
+		output += String.format("%-3s %-12s %-8s %-12s %-15s %-16s %-17s %-15s %-30s %-10s\n", "ID", "NAME", "GRADE", "CLASS NAME", "CLASS TEACHER ", "PARENT NAME", "PARENT EMAIL", "PARENT CONTACT", "ADDRESS", "CCA");
+		for (int i = 0; i < studentList.size(); i++) {
+			Student s = studentList.get(i);
+			output += String.format("%-3d %-12s %-8s %-12s %-15s %-16s %-17s %-15s %-30s %-10s\n", s.getStudentID(), s.getName(), s.getGrade(), s.getClassname(), s.getClassteacher(),s.getParentName(), s.getParentEmail(),s.getParentNumber(), s.getAddress(), s.getCca());
+		}
+		return output;
+	}
 	
 
 	// STUDENT METHODS
@@ -531,7 +542,7 @@ public class C206_CaseStudy {
 		return r;
 	}
 
-	private static boolean editStudentStatus(ArrayList<Student> studentList, int studentId, String nameUpdate,
+	static boolean editStudentStatus(ArrayList<Student> studentList, int studentId, String nameUpdate,
 			String gradeUpdate, String classnameUpdate, String classteacherUpdate, String parentNameUpdate,
 			String parentEmailUpdate, String addressUpdate, String contactNoUpdate) {
 		// TODO Auto-generated method stub
@@ -552,7 +563,7 @@ public class C206_CaseStudy {
 		return rightStatus;
 	}
 	
-	private static boolean removeStudent(ArrayList<Student> studentList, int deleteStudentID) {
+	static boolean removeStudent(ArrayList<Student> studentList, int deleteStudentID) {
 		boolean a = false;
 		for (int i = 0; i < studentList.size(); i++) {
 			Student s = studentList.get(i);
@@ -585,18 +596,7 @@ public class C206_CaseStudy {
 		return output;
 	}
 
-	private static String studentListToString(ArrayList<Student> studentList) {
-		String output = "";
-		output += String.format("%-3s %-12s %-8s %-12s %-15s %-16s %-17s %-15s %-30s %-10s\n", "ID", "NAME", 
-				"GRADE", "CLASS NAME", "CLASS TEACHER ", "PARENT NAME", "PARENT EMAIL", "PARENT CONTACT", "ADDRESS", "CCA");
-		for (int i = 0; i < studentList.size(); i++) {
-			Student s = studentList.get(i);
-			output += String.format("%-3s %-12s %-8s %-12s %-15s %-16s %-17s %-15s %-30s %-10s\n", s.getStudentID(), 
-					s.getName(), s.getGrade(), s.getClassname(), s.getClassteacher(),s.getParentName(), s.getParentEmail(),
-					s.getParentNumber(), s.getAddress(), s.getCca());
-		}
-		return output;
-	}
+	
 
 
 	private static int getallstudentList(ArrayList<Student> studentList) {
