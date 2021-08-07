@@ -450,6 +450,7 @@ public class C206_CaseStudy {
 		} else {
 			r = true;
 			ccaList.add(newCCA);
+			System.out.println("CCA ADDED SUCCESSFULL !");
 		}
 		return r;
 	}
@@ -471,6 +472,7 @@ public class C206_CaseStudy {
 				rightStatus = true;
 			}
 		}
+		System.out.println("CCA UPDATED SUCCESSFULL !");
 		return rightStatus;
 	}
 
@@ -485,6 +487,7 @@ public class C206_CaseStudy {
 				break;
 			}
 		}
+		System.out.println("CCA DELETE SUCCESSFULL !");
 		return a;
 	}
 
@@ -512,6 +515,7 @@ public class C206_CaseStudy {
 			CCA cca = ccaList.get(i);				
 			output += String.format("%-3d %-10s %-17s %-50s %-14s %-15s %-10s %-15s %-10s\n", cca.getID(), cca.getTitle(), cca.getCategory(),cca.getDescription(), cca.getSize(), cca.getDay(),cca.getTime(), cca.getVenue(), cca.getInstructorName());
 		}
+		System.out.println("VIEW ALL CCA SUCCESSFULL !");
 		return output;
 	}
 
@@ -522,6 +526,7 @@ public class C206_CaseStudy {
 			Student s = studentList.get(i);
 			output += String.format("%-3d %-12s %-8s %-12s %-15s %-16s %-17s %-15s %-30s %-10s\n", s.getStudentID(), s.getName(), s.getGrade(), s.getClassname(), s.getClassteacher(),s.getParentName(), s.getParentEmail(),s.getParentNumber(), s.getAddress(), s.getCca());
 		}
+		System.out.println("VIEW ALL STUDENT SUCCESSFULL !");
 		return output;
 	}
 	
@@ -538,10 +543,15 @@ public class C206_CaseStudy {
 		} else {
 			r = true;
 			studentList.add(newSchedule);
+			System.out.println("Student ADDED SUCCESSFULL !");
+			
 		}
 		return r;
 	}
 
+	
+	
+	
 	static boolean editStudentStatus(ArrayList<Student> studentList, int studentId, String nameUpdate,
 			String gradeUpdate, String classnameUpdate, String classteacherUpdate, String parentNameUpdate,
 			String parentEmailUpdate, String addressUpdate, String contactNoUpdate) {
@@ -560,6 +570,7 @@ public class C206_CaseStudy {
 				rightStatus = true;
 			}			
 		}
+		System.out.println("STUDENT UPDATE SUCCESSFULL !");
 		return rightStatus;
 	}
 	
@@ -573,6 +584,7 @@ public class C206_CaseStudy {
 				break;
 			}
 		}
+		System.out.println("STUDENT DELETE SUCCESSFULL !");
 		return a;
 	}
 
