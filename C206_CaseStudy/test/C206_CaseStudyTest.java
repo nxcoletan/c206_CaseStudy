@@ -38,7 +38,7 @@ public class C206_CaseStudyTest {
 		
 	}
 	
-	//ADD STUDENT TEST
+	//ADD STUDENT/PARENT TEST
 	@Test
 	public void addStudentTest() {
 		// Item list is not null, so that can add a new item - boundary
@@ -47,13 +47,13 @@ public class C206_CaseStudyTest {
 		//The item just added is as same as the first item of the list
 		C206_CaseStudy.addStudent(studentList, st1);
 		assertEquals("Check that Student arraylist size is 1", 1, studentList.size());
-		assertSame("Check that Student is added", st1, studentList.get(0));
+		assertSame("Check that Student/Parent is added", st1, studentList.get(0));
 		
 		//Add another item. test The size of the list is 2? -normal
 		//The item just added is as same as the second item of the list
 		C206_CaseStudy.addStudent(studentList, st2);
 		assertEquals("Check that Student arraylist size is 2", 2, studentList.size());
-		assertSame("Check that Student is added", st2, studentList.get(1));
+		assertSame("Check that Student/Parent is added", st2, studentList.get(1));
 	}
 	
 	//ADD CCA TEST
@@ -74,7 +74,7 @@ public class C206_CaseStudyTest {
 		assertSame("Check that CCA is added", c2, ccaList.get(1));
 	}
 	
-	//VIEW STUDENT TEST
+	//VIEW STUDENT/PARENT TEST
 	@Test
 	public void studentListToStringTest() {
 		// Test if Item list is not null but empty -boundary
@@ -129,24 +129,24 @@ public class C206_CaseStudyTest {
 		
 	}
 	
-	// DELETE STUDENT TEST
+	// DELETE STUDENT/PARENT TEST
 	@Test
 	public void removeStudentTest() {
-		assertNotNull("Test if there is valid Student arraylist to retrieve item", studentList);
+		assertNotNull("Test if there is valid Student/Parent arraylist to retrieve item", studentList);
 		
 		C206_CaseStudy.addStudent(studentList, st1);
-		assertEquals("Check that Student arraylist size is 1", 1, studentList.size());
-		assertSame("Check that Student is added", st1, studentList.get(0));
+		assertEquals("Check that Student/Parent arraylist size is 1", 1, studentList.size());
+		assertSame("Check that Student/Parent is added", st1, studentList.get(0));
 		
 		
 		C206_CaseStudy.addStudent(studentList, st2);
-		assertEquals("Check that Student arraylist size is 2", 2, studentList.size());
-		assertSame("Check that Student is added", st2, studentList.get(1));
+		assertEquals("Check that Student/Parent arraylist size is 2", 2, studentList.size());
+		assertSame("Check that Student/Parent is added", st2, studentList.get(1));
 		
 		
 		C206_CaseStudy.removeStudent(studentList, st2.getStudentID());
-		assertEquals("Check that Student arraylist size is 1", 1, studentList.size());
-		assertSame("Check that Student is added", st1, studentList.get(0));
+		assertEquals("Check that Student/Parent arraylist size is 1", 1, studentList.size());
+		assertSame("Check that Student/Parent is added", st1, studentList.get(0));
 		
 	
 	}
@@ -174,28 +174,28 @@ public class C206_CaseStudyTest {
 		}
 	
 	
-	// UPDATE STUDENT TEST
+	// UPDATE STUDENT/PARENT TEST
 	@Test
 	public void editStudentStatusTest() {
-		assertNotNull("Test if there is valid Student arraylist to retrieve item", studentList);
+		assertNotNull("Test if there is valid Student/Parent arraylist to retrieve item", studentList);
 		
 		C206_CaseStudy.addStudent(studentList, st1);
-		assertEquals("Check that Student arraylist size is 1", 1, studentList.size());
-		assertSame("Check that Student is added", st1, studentList.get(0));
+		assertEquals("Check that Student/Parent arraylist size is 1", 1, studentList.size());
+		assertSame("Check that Student/Parent is added", st1, studentList.get(0));
 		
 		
 		C206_CaseStudy.addStudent(studentList, st2);
-		assertEquals("Check that Student arraylist size is 2", 2, studentList.size());
-		assertSame("Check that Student is added", st2, studentList.get(1));	
+		assertEquals("Check that Student/Parent arraylist size is 2", 2, studentList.size());
+		assertSame("Check that Student/Parent is added", st2, studentList.get(1));	
 		
 		
 		C206_CaseStudy.editStudentStatus(studentList, st2.getStudentID(),"Lionel Lim",st2.getGrade(), st2.getClassname(), st2.getClassteacher(), st2.getParentName(), st2.getParentEmail(), st2.getAddress(), st2.getParentNumber());
 		
 		
-		assertEquals("Check that Student arraylist size is 2", 2, studentList.size());
-		assertSame("Check that Student is added", st1, studentList.get(0));
+		assertEquals("Check that Student/Parent arraylist size is 2", 2, studentList.size());
+		assertSame("Check that Student/Parent is added", st1, studentList.get(0));
 		
-		assertSame("Check that Student is added", st2.getName(), "Lionel Lim");
+		assertSame("Check that Student/Parent is added", st2.getName(), "Lionel Lim");
 		
 	}
 	
